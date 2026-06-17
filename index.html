@@ -109,10 +109,10 @@
   .news li { display: flex; gap: 18px; padding: 9px 0; border-bottom: 1px dashed var(--line); }
   .news li:last-child { border-bottom: none; }
   .news .when {
-    flex: 0 0 56px; font-family: var(--mono); font-size: .8rem; color: var(--faint);
+    flex: 0 0 82px; font-family: var(--mono); font-size: .8rem; color: var(--faint);
     padding-top: 4px; font-variant-numeric: tabular-nums;
   }
-  .news .what { flex: 1; }
+  .news .what { flex: 1; min-width: 0; }
   .news .what em { font-style: italic; color: var(--ink); }
   .news .what strong { font-weight: 600; }
 
@@ -161,7 +161,7 @@
   .stack li { display: flex; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--line-soft); }
   .stack li:last-child { border-bottom: none; }
   .stack .yr { flex: 0 0 116px; font-family: var(--mono); font-size: .82rem; color: var(--faint); padding-top: 2px; font-variant-numeric: tabular-nums; }
-  .stack .desc { flex: 1; }
+  .stack .desc { flex: 1; min-width: 0; }
   .stack .desc .place { color: var(--faint); }
 
   footer {
@@ -186,8 +186,12 @@
   @media (max-width: 600px) {
     .wrap { padding: 44px 20px 70px; }
     .profile { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .intro, .pills { width: 100%; }
     .avatar { flex-basis: 132px; width: 132px; height: 132px; }
     h1 { font-size: 2.05rem; }
+    .role { overflow-wrap: break-word; }
+    .news li { gap: 12px; }
+    .news .when { flex-basis: 72px; font-size: .75rem; }
     .stack li { flex-direction: column; gap: 2px; }
     .stack .yr { flex-basis: auto; }
   }
@@ -239,15 +243,15 @@
     <h2>News</h2>
     <ul class="news">
       <li>
-        <span class="when">2026</span>
+        <span class="when">2025 Dec.</span>
         <span class="what">Our <strong>TopoSense</strong> benchmark is open-sourced and integrated into Microsoft's <a href="https://github.com/sys-intelligence/system-intelligence-benchmark/tree/main/benchmarks/toposense_bench" target="_blank" rel="noopener">System Intelligence Benchmark</a>. 🎉</span>
       </li>
       <li>
-        <span class="when">2026</span>
+        <span class="when">2025 Nov.</span>
         <span class="what"><em>IoT-Brain</em> is accepted to <strong>ACM MobiCom 2026</strong>.</span>
       </li>
       <li>
-        <span class="when">2026</span>
+        <span class="when">2026 Mar.</span>
         <span class="what">Two papers, <em>VIGIL</em> and <em>Re³</em>, are accepted to <strong>ACL 2026</strong>.</span>
       </li>
     </ul>
@@ -319,7 +323,7 @@
     <ul class="stack">
       <li>
         <span class="yr">USTC</span>
-        <span class="desc">中国科学技术大学第七届工程类研究生学术论坛暨"德创·精尖创新"博士生学术论坛 &nbsp;<a href="https://gradschool.ustc.edu.cn/article/3488" target="_blank" rel="noopener">Details →</a></span>
+        <span class="desc">中国科学技术大学第七届工程类研究生学术论坛暨"德创·精尖创新"博士生学术论坛 <span class="place">— USTC Graduate Engineering Academic Forum and Doctoral Academic Forum</span> &nbsp;<a href="https://gradschool.ustc.edu.cn/article/3488" target="_blank" rel="noopener">Details →</a></span>
       </li>
     </ul>
   </section>

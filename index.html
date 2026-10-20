@@ -64,10 +64,6 @@
   ],
   "knowsAbout": [
     "LLM Agents",
-    "Multi-agent Systems",
-    "IoT-Brain",
-    "Semantic-Spatial Sensor Scheduling",
-    "AI Security",
     "Physical World Agents"
   ]
 }
@@ -80,164 +76,78 @@
     --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
     --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 
-    --bg: #fbfbf9;
-    --bg-glow-1: rgba(14,147,132,.13);
-    --bg-glow-2: rgba(70,110,200,.08);
-    --grid: rgba(25,28,31,.045);
-    --surface: #ffffff;
-    --surface-2: #f6f6f3;
-    --ink: #171a1d;
-    --ink-2: #2c3338;
-    --muted: #59616a;
-    --faint: #8f979e;
-    --line: #e7e5df;
-    --line-soft: #efeee9;
-
+    --bg: #fdfdfc;
+    --ink: #1a1d20;
+    --ink-2: #33393e;
+    --muted: #5f666c;
+    --faint: #91989e;
+    --line: #e6e4df;
+    --code-bg: #f6f5f2;
     --accent: #0b6e5f;
-    --accent-bright: #0e9384;
-    --accent-wash: #ecf6f3;
-    --accent-line: #c5e3dc;
-    --accent-ink: #1f4a42;
+    --nav-bg: rgba(253,253,252,.9);
 
-    --journal: #3d5a99;
-    --journal-wash: #eef2fa;
-    --journal-line: #cdd8ee;
-
-    --nav-bg: rgba(251,251,249,.78);
-    --shadow-card: 0 1px 2px rgba(16,24,22,.04), 0 8px 24px -16px rgba(16,40,36,.22);
-    --shadow-hover: 0 2px 4px rgba(16,24,22,.05), 0 18px 40px -20px rgba(13,60,52,.35);
-
-    --max: 920px;
-    --nav-h: 60px;
+    --max: 800px;
+    --nav-h: 54px;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #0f1413;
-      --bg-glow-1: rgba(22,170,150,.14);
-      --bg-glow-2: rgba(90,130,230,.09);
-      --grid: rgba(255,255,255,.035);
-      --surface: #151b1a;
-      --surface-2: #1a2120;
-      --ink: #e8ecea;
-      --ink-2: #cdd4d1;
-      --muted: #9aa5a1;
-      --faint: #6d7874;
-      --line: #26302e;
-      --line-soft: #1f2826;
-      --accent: #4fc7b3;
-      --accent-bright: #2fb9a3;
-      --accent-wash: rgba(47,185,163,.10);
-      --accent-line: rgba(79,199,179,.32);
-      --accent-ink: #bfe9e0;
-      --journal: #9db5ec;
-      --journal-wash: rgba(120,150,230,.12);
-      --journal-line: rgba(157,181,236,.32);
-      --nav-bg: rgba(15,20,19,.74);
-      --shadow-card: 0 1px 2px rgba(0,0,0,.3), 0 10px 28px -18px rgba(0,0,0,.7);
-      --shadow-hover: 0 2px 6px rgba(0,0,0,.35), 0 20px 44px -20px rgba(0,0,0,.85);
+      --bg: #121514;
+      --ink: #e6e9e7;
+      --ink-2: #cdd2cf;
+      --muted: #9ba3a0;
+      --faint: #6f7875;
+      --line: #2a302e;
+      --code-bg: #1a1f1e;
+      --accent: #5cc4b2;
+      --nav-bg: rgba(18,21,20,.9);
     }
   }
   :root[data-theme="dark"] {
-    --bg: #0f1413;
-    --bg-glow-1: rgba(22,170,150,.14);
-    --bg-glow-2: rgba(90,130,230,.09);
-    --grid: rgba(255,255,255,.035);
-    --surface: #151b1a;
-    --surface-2: #1a2120;
-    --ink: #e8ecea;
-    --ink-2: #cdd4d1;
-    --muted: #9aa5a1;
-    --faint: #6d7874;
-    --line: #26302e;
-    --line-soft: #1f2826;
-    --accent: #4fc7b3;
-    --accent-bright: #2fb9a3;
-    --accent-wash: rgba(47,185,163,.10);
-    --accent-line: rgba(79,199,179,.32);
-    --accent-ink: #bfe9e0;
-    --journal: #9db5ec;
-    --journal-wash: rgba(120,150,230,.12);
-    --journal-line: rgba(157,181,236,.32);
-    --nav-bg: rgba(15,20,19,.74);
-    --shadow-card: 0 1px 2px rgba(0,0,0,.3), 0 10px 28px -18px rgba(0,0,0,.7);
-    --shadow-hover: 0 2px 6px rgba(0,0,0,.35), 0 20px 44px -20px rgba(0,0,0,.85);
+    --bg: #121514;
+    --ink: #e6e9e7;
+    --ink-2: #cdd2cf;
+    --muted: #9ba3a0;
+    --faint: #6f7875;
+    --line: #2a302e;
+    --code-bg: #1a1f1e;
+    --accent: #5cc4b2;
+    --nav-bg: rgba(18,21,20,.9);
   }
 
   /* ============ Base ============ */
   * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 20px); }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 16px); }
   body {
     margin: 0; background: var(--bg); color: var(--ink);
     font-family: var(--sans); font-size: 16px; line-height: 1.7;
     -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
-    transition: background-color .25s ease, color .25s ease;
   }
-  ::selection { background: var(--accent-line); }
+  ::selection { background: rgba(14,147,132,.18); }
 
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-  a:focus-visible, button:focus-visible {
-    outline: 2px solid var(--accent-bright); outline-offset: 3px; border-radius: 4px;
-  }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
 
-  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
-
-  /* Decorative backdrop behind the hero */
-  .backdrop {
-    position: absolute; inset: 0 0 auto 0; height: 640px; z-index: -1; pointer-events: none; overflow: hidden;
-  }
-  .backdrop::before {
-    content: ""; position: absolute; inset: 0;
-    background-image:
-      linear-gradient(var(--grid) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-    background-size: 32px 32px;
-    -webkit-mask-image: radial-gradient(ellipse 70% 80% at 50% 0%, #000 30%, transparent 75%);
-            mask-image: radial-gradient(ellipse 70% 80% at 50% 0%, #000 30%, transparent 75%);
-  }
-  .backdrop::after {
-    content: ""; position: absolute; inset: -120px -10% auto -10%; height: 620px;
-    background:
-      radial-gradient(40% 55% at 22% 38%, var(--bg-glow-1), transparent 70%),
-      radial-gradient(38% 50% at 82% 22%, var(--bg-glow-2), transparent 70%);
-    filter: blur(8px);
-  }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 
   /* ============ Navigation ============ */
   .nav {
     position: sticky; top: 0; z-index: 50; height: var(--nav-h);
-    background: var(--nav-bg);
-    -webkit-backdrop-filter: saturate(160%) blur(14px); backdrop-filter: saturate(160%) blur(14px);
-    border-bottom: 1px solid transparent; transition: border-color .2s ease, background-color .25s ease;
+    background: var(--nav-bg); border-bottom: 1px solid var(--line);
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
   }
-  .nav.scrolled { border-bottom-color: var(--line); }
-  .nav .wrap { height: 100%; display: flex; align-items: center; gap: 24px; }
-  .brand {
-    display: inline-flex; align-items: center; gap: 10px; color: var(--ink);
-    font-family: var(--serif); font-weight: 600; font-size: 1.12rem; letter-spacing: -.01em; white-space: nowrap;
-  }
+  .nav .wrap { height: 100%; display: flex; align-items: center; gap: 20px; }
+  .brand { font-family: var(--serif); font-size: 1.08rem; font-weight: 500; color: var(--ink); white-space: nowrap; }
   .brand:hover { text-decoration: none; }
-  .brand-mark {
-    width: 26px; height: 26px; border-radius: 7px; flex: none;
-    background: linear-gradient(140deg, var(--accent-bright), var(--accent));
-    display: grid; place-items: center; color: #fff;
-    box-shadow: 0 4px 10px -4px rgba(11,110,95,.6);
-  }
-  .brand-mark svg { width: 14px; height: 14px; }
-  .nav-links { margin-left: auto; display: flex; align-items: center; gap: 2px; list-style: none; padding: 0; }
-  .nav-links a {
-    display: block; padding: 6px 11px; border-radius: 8px;
-    color: var(--muted); font-size: .88rem; font-weight: 500; transition: color .15s ease, background-color .15s ease;
-  }
-  .nav-links a:hover { color: var(--ink); background: var(--surface-2); text-decoration: none; }
-  .nav-links a.active { color: var(--accent); background: var(--accent-wash); }
+  .nav-links { margin: 0 0 0 auto; padding: 0; list-style: none; display: flex; gap: 20px; }
+  .nav-links a { color: var(--muted); font-size: .88rem; white-space: nowrap; }
+  .nav-links a:hover, .nav-links a.active { color: var(--ink); text-decoration: none; }
   .theme-toggle {
-    flex: none; width: 36px; height: 36px; border-radius: 10px; cursor: pointer;
-    display: grid; place-items: center; color: var(--muted);
-    background: var(--surface); border: 1px solid var(--line); transition: all .15s ease;
+    flex: none; width: 30px; height: 30px; padding: 0; margin-right: -6px; cursor: pointer;
+    display: grid; place-items: center; color: var(--muted); background: none; border: 0; border-radius: 6px;
   }
-  .theme-toggle:hover { color: var(--accent); border-color: var(--accent-line); }
-  .theme-toggle svg { width: 17px; height: 17px; }
+  .theme-toggle:hover { color: var(--ink); }
+  .theme-toggle svg { width: 16px; height: 16px; }
   .theme-toggle .sun { display: none; }
   :root[data-theme="dark"] .theme-toggle .sun { display: block; }
   :root[data-theme="dark"] .theme-toggle .moon { display: none; }
@@ -246,291 +156,106 @@
     :root:not([data-theme="light"]) .theme-toggle .moon { display: none; }
   }
 
-  /* ============ Hero ============ */
-  .hero { position: relative; padding: 72px 0 20px; }
-  .hero-grid { display: grid; grid-template-columns: 196px 1fr; gap: 44px; align-items: center; }
-  .avatar-frame {
-    position: relative; width: 196px; height: 196px; border-radius: 28px; padding: 4px;
-    background: conic-gradient(from 210deg, var(--accent-bright), #7fd3c4, var(--journal), var(--accent-bright));
-    box-shadow: 0 24px 48px -24px rgba(13,70,60,.55);
-  }
-  .avatar {
-    width: 100%; height: 100%; border-radius: 24px; overflow: hidden; position: relative;
-    background: var(--accent-wash); border: 3px solid var(--bg);
-  }
+  /* ============ Profile ============ */
+  .profile { display: flex; gap: 32px; align-items: center; padding: 52px 0 0; }
+  .avatar { flex: 0 0 148px; width: 148px; height: 148px; border-radius: 8px; overflow: hidden; background: var(--code-bg); position: relative; }
   .avatar img { width: 100%; height: 100%; object-fit: cover; object-position: 66% 50%; display: block; }
   .avatar.noimg img { display: none; }
   .avatar.noimg::before {
     content: "avatar.jpg"; position: absolute; inset: 0; display: flex;
     align-items: center; justify-content: center; color: var(--faint); font-size: .8rem;
   }
-
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: 8px; margin: 0 0 14px;
-    font-family: var(--mono); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent);
-  }
-  .eyebrow .dot {
-    width: 7px; height: 7px; border-radius: 50%; background: var(--accent-bright);
-    box-shadow: 0 0 0 4px var(--accent-wash);
-  }
-  h1 {
-    font-family: var(--serif); font-weight: 500; font-size: 3.1rem;
-    line-height: 1.02; letter-spacing: -0.022em; margin: 0 0 12px;
-  }
-  h1 .cn {
-    font-family: var(--sans); font-size: 1.15rem; font-weight: 400; letter-spacing: .08em;
-    color: var(--faint); margin-left: 12px; vertical-align: middle;
-  }
-  .role { color: var(--muted); font-size: 1.02rem; margin: 0; line-height: 1.6; }
-  .role strong { color: var(--ink); font-weight: 600; }
-
-  .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 18px 0 0; padding: 0; list-style: none; }
-  .tags li {
-    font-size: .8rem; color: var(--ink-2); padding: 3px 11px; border-radius: 999px;
-    background: var(--surface); border: 1px solid var(--line);
-  }
-
-  .actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
-  .btn {
-    display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 15px;
-    border-radius: 10px; font-size: .88rem; font-weight: 500; white-space: nowrap;
-    color: var(--ink-2); background: var(--surface); border: 1px solid var(--line);
-    transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease, color .16s ease;
-  }
-  .btn:hover { text-decoration: none; color: var(--accent); border-color: var(--accent-line); transform: translateY(-1px); box-shadow: var(--shadow-card); }
-  .btn.primary {
-    color: #fff; border-color: transparent;
-    background: linear-gradient(135deg, var(--accent-bright), #0b6e5f);
-    box-shadow: 0 8px 20px -10px rgba(11,110,95,.75);
-  }
-  .btn.primary:hover { color: #fff; box-shadow: 0 12px 26px -10px rgba(11,110,95,.85); }
-  .btn svg { width: 16px; height: 16px; flex: none; }
+  .intro { flex: 1; min-width: 0; }
+  h1 { font-family: var(--serif); font-weight: 500; font-size: 1.95rem; line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 8px; }
+  h1 .cn { font-family: var(--sans); font-size: 1rem; font-weight: 400; color: var(--faint); margin-left: 10px; letter-spacing: .04em; }
+  .line { margin: 0; color: var(--muted); line-height: 1.65; }
+  .line strong { color: var(--ink-2); font-weight: 500; }
+  .contact { margin: 12px 0 0; color: var(--faint); }
+  .contact a { font-weight: 500; }
+  .contact .sep { margin: 0 7px; }
 
   /* ============ Sections ============ */
-  main { padding-bottom: 96px; }
-  section { margin-top: 72px; }
-  .sec-head { display: flex; align-items: baseline; gap: 14px; margin: 0 0 24px; }
-  .sec-num { font-family: var(--mono); font-size: .78rem; color: var(--accent-bright); letter-spacing: .06em; }
+  main { padding-bottom: 80px; }
+  section { margin-top: 48px; }
   h2 {
-    font-family: var(--serif); font-weight: 600; font-size: 1.75rem;
-    letter-spacing: -0.015em; color: var(--ink); margin: 0; line-height: 1.2;
+    font-family: var(--serif); font-weight: 600; font-size: 1.4rem; letter-spacing: -0.005em; line-height: 1.3;
+    margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px solid var(--line);
   }
-  .sec-head .rule { flex: 1; height: 1px; background: linear-gradient(90deg, var(--line), transparent); align-self: center; }
-  p { margin: 0 0 14px; }
-
-  /* ============ About ============ */
-  .about p { color: var(--ink-2); font-size: 1.04rem; line-height: 1.8; }
+  p { margin: 0 0 12px; }
+  .about p { color: var(--ink-2); }
   .about p:last-child { margin-bottom: 0; }
-  .focus {
-    margin-top: 22px; position: relative; padding: 20px 24px 20px 26px; border-radius: 14px;
-    background: linear-gradient(135deg, var(--accent-wash), transparent 85%);
-    border: 1px solid var(--accent-line);
-  }
-  .focus::before {
-    content: ""; position: absolute; left: 0; top: 18px; bottom: 18px; width: 3px; border-radius: 0 3px 3px 0;
-    background: linear-gradient(var(--accent-bright), var(--journal));
-  }
-  .focus .label {
-    display: block; font-family: var(--mono); font-size: .7rem; letter-spacing: .14em;
-    text-transform: uppercase; color: var(--accent); margin-bottom: 6px;
-  }
-  .focus p { margin: 0; font-family: var(--serif); font-size: 1.22rem; line-height: 1.5; color: var(--ink); }
+  .about em { font-style: italic; color: var(--ink); }
 
-  /* ============ News (timeline) ============ */
-  .news { list-style: none; padding: 0; margin: 0; position: relative; }
-  .news::before {
-    content: ""; position: absolute; left: 95px; top: 10px; bottom: 10px; width: 1px;
-    background: linear-gradient(var(--accent-line), var(--line) 70%, transparent);
-  }
-  .news li { position: relative; display: grid; grid-template-columns: 96px 1fr; gap: 26px; padding: 9px 0; }
-  .news li::before {
-    content: ""; position: absolute; left: 91px; top: 18px; width: 9px; height: 9px; border-radius: 50%;
-    background: var(--bg); border: 2px solid var(--accent-bright);
-  }
-  .news li:first-child::before { background: var(--accent-bright); box-shadow: 0 0 0 4px var(--accent-wash); }
-  .news .when {
-    font-family: var(--mono); font-size: .78rem; color: var(--faint); padding-top: 4px;
-    text-align: right; padding-right: 8px; font-variant-numeric: tabular-nums; white-space: nowrap;
-  }
-  .news .what { color: var(--ink-2); }
-  .news .what em { font-style: italic; color: var(--ink); }
-  .news .what strong { font-weight: 600; color: var(--ink); }
+  /* Two-column rows shared by News, Honors and Education */
+  .rows { list-style: none; padding: 0; margin: 0; }
+  .rows li { display: grid; grid-template-columns: 176px 1fr; gap: 20px; padding: 6px 0; }
+  .rows .when { font-family: var(--mono); font-size: .8rem; color: var(--faint); padding-top: 3px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .rows .what { color: var(--ink-2); min-width: 0; }
+  .rows .what em { color: var(--ink); }
+  .rows .what strong { color: var(--ink); font-weight: 600; }
+  .rows .place { color: var(--faint); }
+  .news li, .short li { grid-template-columns: 96px 1fr; }
+
+  .edu li { padding: 8px 0; }
+  .edu .title { display: block; color: var(--ink); font-weight: 600; }
+  .edu .meta { display: block; color: var(--muted); font-size: .94rem; }
 
   /* ============ Publications ============ */
-  .pubs { display: flex; flex-direction: column; gap: 16px; }
-  .pub {
-    display: grid; grid-template-columns: 112px 1fr; gap: 24px;
-    padding: 22px 24px; border-radius: 16px; background: var(--surface);
-    border: 1px solid var(--line); box-shadow: var(--shadow-card);
-    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-  }
-  .pub:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); border-color: var(--accent-line); }
-
-  .badge {
-    align-self: start; display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 2px; min-height: 84px; padding: 12px 8px; border-radius: 12px; text-align: center;
-    color: #fff; background: linear-gradient(150deg, #13a08f, #0b6e5f 70%);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 10px 20px -14px rgba(11,110,95,.9);
-  }
-  .badge .v { font-family: var(--sans); font-weight: 600; font-size: 1rem; letter-spacing: .01em; line-height: 1.15; }
-  .badge .y { font-family: var(--mono); font-size: .76rem; opacity: .85; }
-  .badge.journal { background: linear-gradient(150deg, #5876b8, #34508f 70%); box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 10px 20px -14px rgba(52,80,143,.9); }
-  .badge-col { display: flex; flex-direction: column; gap: 8px; align-items: stretch; }
-  .rank {
-    text-align: center; font-family: var(--mono); font-size: .64rem; font-weight: 500; letter-spacing: .1em;
-    color: var(--accent); border: 1px solid var(--accent-line); background: var(--accent-wash);
-    padding: 2px 6px; border-radius: 6px; white-space: nowrap;
-  }
-  .rank.journal { color: var(--journal); border-color: var(--journal-line); background: var(--journal-wash); }
-
-  .pub-body { min-width: 0; }
-  .pub .title { font-weight: 600; font-size: 1.08rem; line-height: 1.42; color: var(--ink); margin: 0 0 6px; }
+  .pub { padding: 16px 0; }
+  .pub + .pub { border-top: 1px solid var(--line); }
+  .pub:first-of-type { padding-top: 0; }
+  .pub .title { margin: 0 0 3px; font-weight: 600; line-height: 1.45; }
   .pub .title a { color: var(--ink); }
-  .pub .title a:hover { color: var(--accent); text-decoration: none; }
-  .authors { color: var(--muted); font-size: .92rem; margin: 0 0 4px; line-height: 1.55; }
-  .authors .me { color: var(--ink); font-weight: 600; text-decoration: underline; text-decoration-color: var(--accent-line); text-decoration-thickness: 2px; text-underline-offset: 3px; }
-  .authors .dagger { color: var(--accent-bright); font-weight: 600; }
-  .venue { margin: 0; font-family: var(--serif); font-style: italic; font-size: .98rem; color: var(--accent); line-height: 1.5; }
-  .venue .extra { font-family: var(--sans); font-style: normal; font-size: .82rem; color: var(--faint); }
-  .tldr { color: var(--muted); font-size: .9rem; margin: 10px 0 0; line-height: 1.6; }
+  .pub .title a:hover { color: var(--accent); }
+  .authors { margin: 0; color: var(--muted); font-size: .94rem; line-height: 1.55; }
+  .authors .me { color: var(--ink); font-weight: 600; }
+  .venue { margin: 2px 0 0; color: var(--muted); font-size: .94rem; line-height: 1.55; }
+  .venue em { color: var(--ink-2); }
+  .venue b { color: var(--ink); font-weight: 600; }
+  .venue .rank { color: var(--accent); font-size: .84rem; font-weight: 500; }
+  .tldr { margin: 6px 0 0; color: var(--muted); font-size: .92rem; line-height: 1.6; }
+  .tldr strong { color: var(--ink-2); font-weight: 600; }
+  .links { margin: 6px 0 0; font-size: .9rem; color: var(--faint); }
+  .links .sep { margin: 0 6px; }
+  .bib-toggle { padding: 0; border: 0; background: none; font: inherit; color: var(--accent); cursor: pointer; }
+  .bib-toggle:hover { text-decoration: underline; text-underline-offset: 3px; }
 
-  .callout {
-    display: flex; gap: 10px; margin-top: 12px; font-size: .86rem; line-height: 1.55; color: var(--accent-ink);
-    background: var(--accent-wash); border: 1px solid var(--accent-line); border-radius: 10px; padding: 10px 13px;
-  }
-  .callout svg { flex: none; width: 16px; height: 16px; margin-top: 2px; color: var(--accent-bright); }
-  .callout strong { font-weight: 600; }
-
-  .lnks { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 7px; }
-  .lnk {
-    display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 11px; border-radius: 8px;
-    font-family: var(--sans); font-size: .78rem; font-weight: 500; cursor: pointer;
-    border: 1px solid var(--line); background: var(--surface-2); color: var(--muted); transition: all .15s ease;
-  }
-  .lnk:hover, .lnk[aria-expanded="true"] { color: var(--accent); border-color: var(--accent-line); background: var(--accent-wash); text-decoration: none; }
-  .lnk svg { width: 13px; height: 13px; flex: none; }
-
-  .bib { position: relative; margin-top: 12px; }
+  .bib { position: relative; margin-top: 10px; }
   .bib[hidden] { display: none; }
   .bib pre {
-    margin: 0; padding: 14px 64px 14px 16px; overflow-x: auto; white-space: pre-wrap; word-break: break-word; border-radius: 10px;
-    font-family: var(--mono); font-size: .76rem; line-height: 1.6; color: var(--ink-2);
-    background: var(--surface-2); border: 1px solid var(--line);
+    margin: 0; padding: 12px 64px 12px 14px; overflow-x: auto; white-space: pre-wrap; word-break: break-word;
+    font-family: var(--mono); font-size: .75rem; line-height: 1.6; color: var(--ink-2);
+    background: var(--code-bg); border: 1px solid var(--line); border-radius: 4px;
   }
   .copy {
-    position: absolute; top: 8px; right: 8px; height: 26px; padding: 0 10px; border-radius: 7px; cursor: pointer;
-    font-family: var(--sans); font-size: .74rem; font-weight: 500; color: var(--muted);
-    background: var(--surface); border: 1px solid var(--line);
+    position: absolute; top: 8px; right: 8px; padding: 1px 8px; cursor: pointer;
+    font-family: var(--sans); font-size: .74rem; color: var(--muted);
+    background: var(--bg); border: 1px solid var(--line); border-radius: 4px;
   }
-  .copy:hover { color: var(--accent); border-color: var(--accent-line); }
+  .copy:hover { color: var(--ink); }
 
-  .foot-note { margin-top: 16px; font-size: .82rem; color: var(--faint); }
-  .foot-note .dagger { color: var(--accent-bright); }
-
-  /* ============ Talks ============ */
-  .talk {
-    display: grid; grid-template-columns: 44px 1fr; gap: 18px; align-items: start;
-    padding: 20px 22px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-card);
-  }
-  .icon-tile {
-    width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
-    color: var(--accent); background: var(--accent-wash); border: 1px solid var(--accent-line);
-  }
-  .icon-tile svg { width: 20px; height: 20px; }
-  .talk .t-cn { display: block; font-weight: 600; color: var(--ink); line-height: 1.55; }
-  .talk .t-en { display: block; margin-top: 3px; color: var(--muted); font-size: .92rem; }
-  .talk .t-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 10px; font-size: .84rem; }
-  .talk .t-meta .where { font-family: var(--mono); font-size: .76rem; color: var(--faint); }
-
-  /* ============ Honors ============ */
-  .honors { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .honors li {
-    display: flex; gap: 14px; align-items: flex-start; padding: 13px 16px; border-radius: 12px;
-    background: var(--surface); border: 1px solid var(--line); transition: border-color .15s ease;
-  }
-  .honors li:hover { border-color: var(--accent-line); }
-  .honors li.major { background: linear-gradient(135deg, var(--accent-wash), var(--surface) 75%); border-color: var(--accent-line); }
-  .honors .yr {
-    flex: none; min-width: 48px; font-family: var(--mono); font-size: .74rem; color: var(--accent);
-    padding: 1px 0 0; font-variant-numeric: tabular-nums; white-space: nowrap;
-  }
-  .honors .desc { flex: 1; min-width: 0; font-size: .92rem; line-height: 1.5; color: var(--ink-2); }
-  .honors .desc .place { display: block; margin-top: 2px; font-size: .8rem; color: var(--faint); }
-  .honors li.major .desc { color: var(--ink); font-weight: 500; }
-
-  /* ============ Education & Experience (timeline) ============ */
-  .timeline { list-style: none; padding: 0; margin: 0; position: relative; }
-  .timeline::before {
-    content: ""; position: absolute; left: 21px; top: 22px; bottom: 22px; width: 2px; border-radius: 2px;
-    background: linear-gradient(var(--accent-line), var(--line));
-  }
-  .timeline li { position: relative; display: grid; grid-template-columns: 44px 1fr; gap: 18px; padding: 0 0 18px; }
-  .timeline li:last-child { padding-bottom: 0; }
-  .timeline .icon-tile { position: relative; z-index: 1; background: var(--surface); }
-  .timeline li.current .icon-tile { color: #fff; border-color: transparent; background: linear-gradient(140deg, var(--accent-bright), #0b6e5f); }
-  .tl-card { padding: 2px 0 0; }
-  .tl-top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; }
-  .tl-title { font-weight: 600; color: var(--ink); font-size: 1.02rem; }
-  .tl-when { font-family: var(--mono); font-size: .76rem; color: var(--faint); white-space: nowrap; font-variant-numeric: tabular-nums; }
-  .tl-org { display: block; margin-top: 2px; color: var(--muted); font-size: .94rem; }
-  .tl-adv { display: block; margin-top: 2px; color: var(--faint); font-size: .88rem; }
-
-  /* ============ Reveal on scroll ============ */
-  @media (prefers-reduced-motion: no-preference) {
-    .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
-    .js .reveal.in { opacity: 1; transform: none; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .pub, .btn { transition: none; }
-  }
+  .foot-note { margin: 10px 0 0; font-size: .82rem; color: var(--faint); }
 
   /* ============ Responsive ============ */
-  @media (max-width: 820px) {
-    .nav-links a { padding: 6px 8px; font-size: .84rem; }
-    .brand .brand-name { display: none; }
+  @media (max-width: 720px) {
+    .nav-links { display: none; }
+    .theme-toggle { margin-left: auto; }
   }
-  @media (max-width: 680px) {
-    :root { --nav-h: 56px; }
+  @media (max-width: 600px) {
     .wrap { padding: 0 16px; }
-    .nav .wrap { gap: 10px; }
-    .nav-links { overflow-x: auto; scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); }
-    .nav-links::-webkit-scrollbar { display: none; }
-    .nav-links a { white-space: nowrap; }
-    .hero { padding: 40px 0 8px; }
-    .hero-grid { grid-template-columns: 1fr; gap: 24px; }
-    .avatar-frame { width: 140px; height: 140px; border-radius: 24px; }
-    .avatar { border-radius: 20px; }
-    h1 { font-size: 2.3rem; }
-    h1 .cn { display: block; margin: 8px 0 0; font-size: 1rem; }
-    section { margin-top: 56px; }
-    h2 { font-size: 1.5rem; }
-    .focus p { font-size: 1.1rem; }
-    .news::before { left: 5px; }
-    .news li { grid-template-columns: 1fr; gap: 0; padding: 8px 0 8px 24px; }
-    .news li::before { left: 1px; top: 15px; }
-    .news .when { text-align: left; padding: 0; }
-    .pub { grid-template-columns: 1fr; gap: 14px; padding: 18px; }
-    .badge-col { flex-direction: row; align-items: center; }
-    .badge { flex-direction: row; gap: 8px; min-height: 0; padding: 6px 12px; border-radius: 9px; }
-    .badge .v { font-size: .86rem; }
-    .badge .y { font-size: .72rem; }
-    .honors { grid-template-columns: 1fr; }
-    .talk { grid-template-columns: 1fr; gap: 12px; padding: 18px; }
+    .profile { flex-direction: column; align-items: flex-start; gap: 18px; padding-top: 32px; }
+    .avatar { flex-basis: 120px; width: 120px; height: 120px; }
+    h1 { font-size: 1.7rem; }
+    section { margin-top: 40px; }
+    .rows li, .news li, .short li { grid-template-columns: 1fr; gap: 0; padding: 7px 0; }
   }
 </style>
 </head>
 <body>
 
-<!-- ================= Navigation ================= -->
 <nav class="nav" aria-label="Primary">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Zhaomeng Zhou, back to top">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"><path d="M38 22 V78"/><path d="M38 52 C38 38 64 38 64 52 V78"/></svg>
-      </span>
-      <span class="brand-name">Zhaomeng Zhou</span>
-    </a>
+    <a class="brand" href="#top">Zhaomeng Zhou</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#news">News</a></li>
@@ -546,123 +271,59 @@
   </div>
 </nav>
 
-<div class="backdrop" aria-hidden="true"></div>
-
 <main class="wrap" id="top">
 
-  <!-- ================= Hero ================= -->
-  <header class="hero">
-    <div class="hero-grid">
-      <div class="avatar-frame">
-        <div class="avatar">
-          <img src="avatar.jpg" alt="Zhaomeng Zhou" onerror="this.closest('.avatar').classList.add('noimg');" />
-        </div>
-      </div>
-      <div class="intro">
-        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Ph.D. Student &middot; Computer Science</p>
-        <h1>Zhaomeng Zhou<span class="cn" lang="zh-CN">周诏盟</span></h1>
-        <p class="role"><strong>University of Science and Technology of China</strong></p>
-        <p class="role">Advised by Prof. <a href="https://scholar.google.com/citations?user=83QxmA8AAAAJ" target="_blank" rel="noopener">Lan Zhang</a></p>
-
-        <ul class="tags" aria-label="Research interests">
-          <li>LLM Agents</li>
-          <li>Physical-World Agents</li>
-          <li>Sensor Scheduling</li>
-          <li>Agent Security</li>
-        </ul>
-
-        <div class="actions">
-          <a class="btn primary" href="mailto:zhouzhm@mail.ustc.edu.cn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            Email
-          </a>
-          <a class="btn" href="https://scholar.google.com/citations?user=4exYB0cAAAAJ" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
-            Google Scholar
-          </a>
-          <a class="btn" href="https://orcid.org/0000-0003-3366-5095" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947 0 .525-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.516.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
-            ORCID
-          </a>
-          <a class="btn" href="https://github.com/houqiii" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5 18.3 5.3 18.3 5.3c.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
-            GitHub
-          </a>
-        </div>
-      </div>
+  <!-- ================= Profile ================= -->
+  <header class="profile">
+    <div class="avatar">
+      <img src="avatar.jpg" alt="Zhaomeng Zhou" onerror="this.closest('.avatar').classList.add('noimg');" />
+    </div>
+    <div class="intro">
+      <h1>Zhaomeng Zhou<span class="cn" lang="zh-CN">周诏盟</span></h1>
+      <p class="line">Ph.D. Student, <strong>University of Science and Technology of China</strong></p>
+      <p class="line">Advised by Prof. <a href="https://scholar.google.com/citations?user=83QxmA8AAAAJ" target="_blank" rel="noopener">Lan Zhang</a></p>
+      <p class="line">Research interests: LLM Agents, Physical-World Agents</p>
+      <p class="contact">
+        <a href="mailto:zhouzhm@mail.ustc.edu.cn">Email</a><span class="sep">/</span><a href="https://scholar.google.com/citations?user=4exYB0cAAAAJ" target="_blank" rel="noopener">Google Scholar</a><span class="sep">/</span><a href="https://orcid.org/0000-0003-3366-5095" target="_blank" rel="noopener">ORCID</a><span class="sep">/</span><a href="https://github.com/houqiii" target="_blank" rel="noopener">GitHub</a>
+      </p>
     </div>
   </header>
 
   <!-- ================= About ================= -->
-  <section class="about reveal" id="about">
-    <div class="sec-head"><span class="sec-num">01</span><h2>About</h2><span class="rule" aria-hidden="true"></span></div>
+  <section class="about" id="about">
+    <h2>About</h2>
     <p>I am a Ph.D. student in Computer Science at the University of Science and Technology of China (USTC), advised by Prof. <a href="https://scholar.google.com/citations?user=83QxmA8AAAAJ" target="_blank" rel="noopener">Lan Zhang</a>. I received my B.Sc. in Computer Science from Lanzhou University in 2024.</p>
-    <div class="focus">
-      <span class="label">Research Focus</span>
-      <p>Reliable intent realization for agents in the physical world: grounding large language models so they can turn high-level human intent into dependable, verifiable actions in real, physical environments.</p>
-    </div>
+    <p>My research centers on <em>reliable intent realization for agents in the physical world</em>: grounding large language models so they can turn high-level human intent into dependable, verifiable actions in real, physical environments.</p>
   </section>
 
   <!-- ================= News ================= -->
-  <section class="reveal" id="news">
-    <div class="sec-head"><span class="sec-num">02</span><h2>News</h2><span class="rule" aria-hidden="true"></span></div>
-    <ul class="news">
-      <li>
-        <span class="when">2026</span>
-        <span class="what">I am honored to receive the <strong>National Scholarship for Master's Students</strong>.</span>
-      </li>
-      <li>
-        <span class="when">2026 Oct.</span>
-        <span class="what">We received the <strong>Finalist Award</strong> in the <a href="https://openaiotlab.github.io/CUHK-X-Challenge/" target="_blank" rel="noopener">CUHK-X Multimodal Human Activity Challenge</a> at <strong>UbiComp 2026</strong>.</span>
-      </li>
-      <li>
-        <span class="when">2026 Aug.</span>
-        <span class="what">Our position paper <a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2026-0130" target="_blank" rel="noopener"><em>Prediction-in-the-Loop</em></a> is now online in <strong>SCIENTIA SINICA Informationis</strong>.</span>
-      </li>
-      <li>
-        <span class="when">2026 Mar.</span>
-        <span class="what">Two papers, <em>VIGIL</em> and <em>Re³</em>, are accepted to <strong>ACL 2026</strong>.</span>
-      </li>
-      <li>
-        <span class="when">2025 Dec.</span>
-        <span class="what">Our <strong>TopoSense</strong> benchmark is open-sourced and integrated into Microsoft's <a href="https://github.com/sys-intelligence/system-intelligence-benchmark/tree/main/benchmarks/toposense_bench" target="_blank" rel="noopener">System Intelligence Benchmark</a>.</span>
-      </li>
-      <li>
-        <span class="when">2025 Nov.</span>
-        <span class="what"><em>IoT-Brain</em> is accepted to <strong>ACM MobiCom 2026</strong>.</span>
-      </li>
+  <section id="news">
+    <h2>News</h2>
+    <ul class="rows news">
+      <li><span class="when">2026</span><span class="what">I am honored to receive the <strong>National Scholarship for Master's Students</strong>.</span></li>
+      <li><span class="when">2026 Oct.</span><span class="what">We received the <strong>Finalist Award</strong> in the <a href="https://openaiotlab.github.io/CUHK-X-Challenge/" target="_blank" rel="noopener">CUHK-X Multimodal Human Activity Challenge</a> at <strong>UbiComp 2026</strong>.</span></li>
+      <li><span class="when">2026 Aug.</span><span class="what">Our position paper <a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2026-0130" target="_blank" rel="noopener"><em>Prediction-in-the-Loop</em></a> is now online in <strong>SCIENTIA SINICA Informationis</strong>.</span></li>
+      <li><span class="when">2026 Mar.</span><span class="what">Two papers, <em>VIGIL</em> and <em>Re³</em>, are accepted to <strong>ACL 2026</strong>.</span></li>
+      <li><span class="when">2025 Dec.</span><span class="what">Our <strong>TopoSense</strong> benchmark is open-sourced and integrated into Microsoft's <a href="https://github.com/sys-intelligence/system-intelligence-benchmark/tree/main/benchmarks/toposense_bench" target="_blank" rel="noopener">System Intelligence Benchmark</a>.</span></li>
+      <li><span class="when">2025 Nov.</span><span class="what"><em>IoT-Brain</em> is accepted to <strong>ACM MobiCom 2026</strong>.</span></li>
     </ul>
   </section>
 
   <!-- ================= Publications ================= -->
-  <section class="reveal" id="publications">
-    <div class="sec-head"><span class="sec-num">03</span><h2>Publications</h2><span class="rule" aria-hidden="true"></span></div>
-    <div class="pubs">
+  <section id="publications">
+    <h2>Publications</h2>
 
-      <!-- IoT-Brain -->
-      <article class="pub">
-        <div class="badge-col">
-          <div class="badge"><span class="v">MobiCom</span><span class="y">2026</span></div>
-          <span class="rank">CCF-A</span>
-        </div>
-        <div class="pub-body">
-          <p class="title"><a href="https://arxiv.org/abs/2604.08033" target="_blank" rel="noopener">IoT-Brain: Grounding LLMs for Semantic-Spatial Sensor Scheduling</a></p>
-          <p class="authors"><span class="me">Zhaomeng Zhou</span>, Lan Zhang, Junyang Wang, Mu Yuan, Junda Lin, Jinke Song</p>
-          <p class="venue">ACM MobiCom 2026 <span class="extra">&middot; also ACM ANAI Workshop @ MobiCom 2025</span></p>
-          <p class="tldr">A verify-before-commit spatial trajectory graph that grounds LLMs in the <em>what-to-sense</em> / <em>when-to-sense</em> decision for large-scale sensor networks.</p>
-          <div class="callout">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg>
-            <span>Our <strong>TopoSense</strong> benchmark, built on the real topological environment of USTC's High-Tech (Gaoxin) Campus, is open-sourced and integrated into Microsoft's <a href="https://github.com/sys-intelligence/system-intelligence-benchmark/tree/main/benchmarks/toposense_bench" target="_blank" rel="noopener">System Intelligence Benchmark</a>.</span>
-          </div>
-          <div class="lnks">
-            <a class="lnk" href="https://arxiv.org/abs/2604.08033" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>arXiv</a>
-            <a class="lnk" href="https://arxiv.org/pdf/2604.08033" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>PDF</a>
-            <a class="lnk" href="https://huggingface.co/datasets/IoT-Brain/TopoSense-Bench" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>Dataset</a>
-            <a class="lnk" href="https://github.com/sys-intelligence/system-intelligence-benchmark/tree/main/benchmarks/toposense_bench" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>Benchmark</a>
-            <button class="lnk bib-toggle" type="button" aria-expanded="false" aria-controls="bib-iotbrain"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/></svg>BibTeX</button>
-          </div>
-          <div class="bib" id="bib-iotbrain" hidden>
-            <button class="copy" type="button">Copy</button>
+    <article class="pub">
+      <p class="title"><a href="https://arxiv.org/abs/2604.08033" target="_blank" rel="noopener">IoT-Brain: Grounding LLMs for Semantic-Spatial Sensor Scheduling</a></p>
+      <p class="authors"><span class="me">Zhaomeng Zhou</span>, Lan Zhang, Junyang Wang, Mu Yuan, Junda Lin, Jinke Song</p>
+      <p class="venue"><em>ACM International Conference on Mobile Computing and Networking</em> (<b>MobiCom</b>), 2026 &middot; <span class="rank">CCF-A</span></p>
+      <p class="venue">Also presented at the ACM ANAI Workshop @ MobiCom 2025</p>
+      <p class="tldr">A verify-before-commit spatial trajectory graph that grounds LLMs in the <em>what-to-sense</em> / <em>when-to-sense</em> decision for large-scale sensor networks. Our <strong>TopoSense</strong> benchmark, built on the real topological environment of USTC's High-Tech (Gaoxin) Campus, is open-sourced and integrated into Microsoft's <a href="https://github.com/sys-intelligence/system-intelligence-benchmark/tree/main/benchmarks/toposense_bench" target="_blank" rel="noopener">System Intelligence Benchmark</a>.</p>
+      <p class="links">
+        <a href="https://arxiv.org/abs/2604.08033" target="_blank" rel="noopener">arXiv</a><span class="sep">/</span><a href="https://arxiv.org/pdf/2604.08033" target="_blank" rel="noopener">PDF</a><span class="sep">/</span><a href="https://huggingface.co/datasets/IoT-Brain/TopoSense-Bench" target="_blank" rel="noopener">Dataset</a><span class="sep">/</span><a href="https://github.com/sys-intelligence/system-intelligence-benchmark/tree/main/benchmarks/toposense_bench" target="_blank" rel="noopener">Benchmark</a><span class="sep">/</span><button class="bib-toggle" type="button" aria-expanded="false" aria-controls="bib-iotbrain">BibTeX</button>
+      </p>
+      <div class="bib" id="bib-iotbrain" hidden>
+        <button class="copy" type="button">Copy</button>
 <pre>@misc{zhou2026iotbraingroundingllmssemanticspatial,
       title={IoT-Brain: Grounding LLMs for Semantic-Spatial Sensor Scheduling}, 
       author={Zhaomeng Zhou and Lan Zhang and Junyang Wang and Mu Yuan and Junda Lin and Jinke Song},
@@ -673,29 +334,19 @@
       doi={https://doi.org/10.1145/3795866.3796695},
       url={https://arxiv.org/abs/2604.08033}, 
 }</pre>
-          </div>
-        </div>
-      </article>
+      </div>
+    </article>
 
-      <!-- VIGIL -->
-      <article class="pub">
-        <div class="badge-col">
-          <div class="badge"><span class="v">ACL</span><span class="y">2026</span></div>
-          <span class="rank">CCF-A</span>
-        </div>
-        <div class="pub-body">
-          <p class="title"><a href="https://aclanthology.org/2026.acl-long.443/" target="_blank" rel="noopener">VIGIL: Defending LLM Agents Against Tool-Stream Injection via Verify-Before-Commit</a></p>
-          <p class="authors">Junda Lin<span class="dagger">†</span>, <span class="me">Zhaomeng Zhou</span><span class="dagger">†</span>, Zhi Zheng, Shuochen Liu, Tong Xu, Yong Chen, Enhong Chen</p>
-          <p class="venue">Annual Meeting of the Association for Computational Linguistics (ACL) 2026, Main Conference</p>
-          <p class="tldr">A verify-before-commit protocol that defends LLM agents against tool-stream injection while preserving reasoning flexibility.</p>
-          <div class="lnks">
-            <a class="lnk" href="https://aclanthology.org/2026.acl-long.443/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>ACL Anthology</a>
-            <a class="lnk" href="https://arxiv.org/abs/2601.05755" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>arXiv</a>
-            <a class="lnk" href="https://arxiv.org/pdf/2601.05755" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>PDF</a>
-            <button class="lnk bib-toggle" type="button" aria-expanded="false" aria-controls="bib-vigil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/></svg>BibTeX</button>
-          </div>
-          <div class="bib" id="bib-vigil" hidden>
-            <button class="copy" type="button">Copy</button>
+    <article class="pub">
+      <p class="title"><a href="https://aclanthology.org/2026.acl-long.443/" target="_blank" rel="noopener">VIGIL: Defending LLM Agents Against Tool-Stream Injection via Verify-Before-Commit</a></p>
+      <p class="authors">Junda Lin<sup>*</sup>, <span class="me">Zhaomeng Zhou</span><sup>*</sup>, Zhi Zheng, Shuochen Liu, Tong Xu, Yong Chen, Enhong Chen</p>
+      <p class="venue"><em>Annual Meeting of the Association for Computational Linguistics</em> (<b>ACL</b>), 2026, Main Conference &middot; <span class="rank">CCF-A</span></p>
+      <p class="tldr">A verify-before-commit protocol that defends LLM agents against tool-stream injection while preserving reasoning flexibility.</p>
+      <p class="links">
+        <a href="https://aclanthology.org/2026.acl-long.443/" target="_blank" rel="noopener">ACL Anthology</a><span class="sep">/</span><a href="https://arxiv.org/abs/2601.05755" target="_blank" rel="noopener">arXiv</a><span class="sep">/</span><a href="https://arxiv.org/pdf/2601.05755" target="_blank" rel="noopener">PDF</a><span class="sep">/</span><button class="bib-toggle" type="button" aria-expanded="false" aria-controls="bib-vigil">BibTeX</button>
+      </p>
+      <div class="bib" id="bib-vigil" hidden>
+        <button class="copy" type="button">Copy</button>
 <pre>@inproceedings{lin-etal-2026-vigil,
     title = "{VIGIL}: Defending {LLM} Agents Against Tool-Stream Injection via Verify-Before-Commit",
     author = "Lin, Junda  and
@@ -719,29 +370,19 @@
     pages = "9764--9785",
     ISBN = "979-8-89176-390-6"
 }</pre>
-          </div>
-        </div>
-      </article>
+      </div>
+    </article>
 
-      <!-- Re3 -->
-      <article class="pub">
-        <div class="badge-col">
-          <div class="badge"><span class="v">ACL</span><span class="y">2026</span></div>
-          <span class="rank">CCF-A</span>
-        </div>
-        <div class="pub-body">
-          <p class="title"><a href="https://aclanthology.org/2026.acl-long.1180/" target="_blank" rel="noopener">Re³: Relevance &amp; Recency Retrieval for Mitigating Temporal Hallucination</a></p>
-          <p class="authors">Jiawei Cao, Jie Ouyang, Mingyue Cheng, <span class="me">Zhaomeng Zhou</span>, Chunli Liu, Yupeng Li, Zirui Liu, Shijin Wang</p>
-          <p class="venue">Annual Meeting of the Association for Computational Linguistics (ACL) 2026, Main Conference</p>
-          <p class="tldr">Balancing relevance and recency for temporal information retrieval to curb temporal hallucination.</p>
-          <div class="lnks">
-            <a class="lnk" href="https://aclanthology.org/2026.acl-long.1180/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>ACL Anthology</a>
-            <a class="lnk" href="https://arxiv.org/abs/2509.01306" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>arXiv</a>
-            <a class="lnk" href="https://arxiv.org/pdf/2509.01306" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>PDF</a>
-            <button class="lnk bib-toggle" type="button" aria-expanded="false" aria-controls="bib-re3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/></svg>BibTeX</button>
-          </div>
-          <div class="bib" id="bib-re3" hidden>
-            <button class="copy" type="button">Copy</button>
+    <article class="pub">
+      <p class="title"><a href="https://aclanthology.org/2026.acl-long.1180/" target="_blank" rel="noopener">Re³: Relevance &amp; Recency Retrieval for Mitigating Temporal Hallucination</a></p>
+      <p class="authors">Jiawei Cao, Jie Ouyang, Mingyue Cheng, <span class="me">Zhaomeng Zhou</span>, Chunli Liu, Yupeng Li, Zirui Liu, Shijin Wang</p>
+      <p class="venue"><em>Annual Meeting of the Association for Computational Linguistics</em> (<b>ACL</b>), 2026, Main Conference &middot; <span class="rank">CCF-A</span></p>
+      <p class="tldr">Balancing relevance and recency for temporal information retrieval to curb temporal hallucination.</p>
+      <p class="links">
+        <a href="https://aclanthology.org/2026.acl-long.1180/" target="_blank" rel="noopener">ACL Anthology</a><span class="sep">/</span><a href="https://arxiv.org/abs/2509.01306" target="_blank" rel="noopener">arXiv</a><span class="sep">/</span><a href="https://arxiv.org/pdf/2509.01306" target="_blank" rel="noopener">PDF</a><span class="sep">/</span><button class="bib-toggle" type="button" aria-expanded="false" aria-controls="bib-re3">BibTeX</button>
+      </p>
+      <div class="bib" id="bib-re3" hidden>
+        <button class="copy" type="button">Copy</button>
 <pre>@inproceedings{cao-etal-2026-re3,
     title = "{R}e$^3$: Relevance {\&amp;} Recency Retrieval for Mitigating Temporal Hallucination",
     author = "Cao, Jiawei  and
@@ -766,28 +407,19 @@
     pages = "25735--25760",
     ISBN = "979-8-89176-390-6"
 }</pre>
-          </div>
-        </div>
-      </article>
+      </div>
+    </article>
 
-      <!-- Prediction-in-the-Loop -->
-      <article class="pub">
-        <div class="badge-col">
-          <div class="badge journal"><span class="v">SSI</span><span class="y">2026</span></div>
-          <span class="rank journal">POSITION</span>
-        </div>
-        <div class="pub-body">
-          <p class="title"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2026-0130" target="_blank" rel="noopener">Prediction-in-the-Loop: a decision-making paradigm endowing agents with foresight</a></p>
-          <p class="authors">Yunhao Liu, Mu Yuan, Lan Zhang, <span class="me">Zhaomeng Zhou</span>, Li Liu</p>
-          <p class="venue">SCIENTIA SINICA Informationis, 2026 <span class="extra">&middot; Position Paper</span></p>
-          <p class="tldr">A foresight-oriented decision-making paradigm that brings action-conditioned counterfactual prediction into the agent decision loop.</p>
-          <div class="lnks">
-            <a class="lnk" href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2026-0130" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>Paper</a>
-            <a class="lnk" href="https://doi.org/10.1360/SSI-2026-0130" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>DOI</a>
-            <button class="lnk bib-toggle" type="button" aria-expanded="false" aria-controls="bib-pitl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/></svg>BibTeX</button>
-          </div>
-          <div class="bib" id="bib-pitl" hidden>
-            <button class="copy" type="button">Copy</button>
+    <article class="pub">
+      <p class="title"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2026-0130" target="_blank" rel="noopener">Prediction-in-the-Loop: a decision-making paradigm endowing agents with foresight</a></p>
+      <p class="authors">Yunhao Liu, Mu Yuan, Lan Zhang, <span class="me">Zhaomeng Zhou</span>, Li Liu</p>
+      <p class="venue"><em>SCIENTIA SINICA Informationis</em>, 2026 &middot; Position Paper</p>
+      <p class="tldr">A foresight-oriented decision-making paradigm that brings action-conditioned counterfactual prediction into the agent decision loop.</p>
+      <p class="links">
+        <a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2026-0130" target="_blank" rel="noopener">Paper</a><span class="sep">/</span><a href="https://doi.org/10.1360/SSI-2026-0130" target="_blank" rel="noopener">DOI</a><span class="sep">/</span><button class="bib-toggle" type="button" aria-expanded="false" aria-controls="bib-pitl">BibTeX</button>
+      </p>
+      <div class="bib" id="bib-pitl" hidden>
+        <button class="copy" type="button">Copy</button>
 <pre>@article{LIU_2026,
   title     = {Prediction-in-the-Loop: a decision-making paradigm endowing agents with foresight},
   volume    = {56},
@@ -802,80 +434,65 @@
   month     = aug,
   pages     = {1867}
 }</pre>
-          </div>
-        </div>
-      </article>
+      </div>
+    </article>
 
-    </div>
-    <p class="foot-note"><span class="dagger">†</span> Equal contribution.</p>
+    <p class="foot-note">* Equal contribution.</p>
   </section>
 
   <!-- ================= Talks ================= -->
-  <section class="reveal" id="talks">
-    <div class="sec-head"><span class="sec-num">04</span><h2>Talks</h2><span class="rule" aria-hidden="true"></span></div>
-    <div class="talk">
-      <span class="icon-tile" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v5"/><path d="M8 22h8"/></svg>
-      </span>
-      <div>
-        <span class="t-cn" lang="zh-CN">中国科学技术大学第七届工程类研究生学术论坛暨"德创·精尖创新"博士生学术论坛</span>
-        <span class="t-en">USTC Graduate Engineering Academic Forum and Doctoral Academic Forum</span>
-        <div class="t-meta">
-          <span class="where">USTC &middot; Hefei</span>
-          <a href="https://gradschool.ustc.edu.cn/article/3488" target="_blank" rel="noopener">Details &rarr;</a>
-        </div>
-      </div>
-    </div>
+  <section id="talks">
+    <h2>Talks</h2>
+    <ul class="rows short">
+      <li>
+        <span class="when">USTC</span>
+        <span class="what"><span lang="zh-CN">中国科学技术大学第七届工程类研究生学术论坛暨"德创·精尖创新"博士生学术论坛</span> <span class="place">— USTC Graduate Engineering Academic Forum and Doctoral Academic Forum</span> &nbsp;<a href="https://gradschool.ustc.edu.cn/article/3488" target="_blank" rel="noopener">Details</a></span>
+      </li>
+    </ul>
   </section>
 
   <!-- ================= Honors ================= -->
-  <section class="reveal" id="honors">
-    <div class="sec-head"><span class="sec-num">05</span><h2>Honors &amp; Awards</h2><span class="rule" aria-hidden="true"></span></div>
-    <ul class="honors">
-      <li class="major"><span class="yr">2026</span><span class="desc">National Scholarship for Master's Students, China</span></li>
-      <li class="major"><span class="yr">2026</span><span class="desc">Finalist Award, <a href="https://openaiotlab.github.io/CUHK-X-Challenge/" target="_blank" rel="noopener">CUHK-X Multimodal Human Activity Challenge</a><span class="place">UbiComp 2026</span></span></li>
-      <li><span class="yr">2026</span><span class="desc">First-Class Academic Scholarship for Doctoral Students<span class="place">USTC</span></span></li>
-      <li><span class="yr">2025</span><span class="desc">First-Class Academic Scholarship for Master's Students<span class="place">USTC</span></span></li>
-      <li><span class="yr">2024</span><span class="desc">First-Class Academic Scholarship for Master's Students<span class="place">USTC</span></span></li>
-      <li><span class="yr">2023</span><span class="desc">Finalist Award (top 2%), Mathematical Contest in Modeling 2023</span></li>
-      <li><span class="yr">2021–22</span><span class="desc">"Future Star" (&times;2), Ministry of Education–Huawei Intelligent Base Program</span></li>
-      <li class="major"><span class="yr">2021</span><span class="desc">National Scholarship, China</span></li>
-      <li><span class="yr">2020–24</span><span class="desc">Several Academic Scholarships<span class="place">Lanzhou University</span></span></li>
+  <section id="honors">
+    <h2>Honors &amp; Awards</h2>
+    <ul class="rows short">
+      <li><span class="when">2026</span><span class="what">National Scholarship for Master's Students, China</span></li>
+      <li><span class="when">2026</span><span class="what">Finalist Award, <a href="https://openaiotlab.github.io/CUHK-X-Challenge/" target="_blank" rel="noopener">CUHK-X Multimodal Human Activity Challenge</a> <span class="place">— UbiComp 2026</span></span></li>
+      <li><span class="when">2026</span><span class="what">First-Class Academic Scholarship for Doctoral Students <span class="place">— USTC</span></span></li>
+      <li><span class="when">2025</span><span class="what">First-Class Academic Scholarship for Master's Students <span class="place">— USTC</span></span></li>
+      <li><span class="when">2024</span><span class="what">First-Class Academic Scholarship for Master's Students <span class="place">— USTC</span></span></li>
+      <li><span class="when">2023</span><span class="what">Finalist Award (top 2%), Mathematical Contest in Modeling 2023</span></li>
+      <li><span class="when">2021 – 2022</span><span class="what">"Future Star" (&times;2), Ministry of Education–Huawei Intelligent Base Program</span></li>
+      <li><span class="when">2021</span><span class="what">National Scholarship, China</span></li>
+      <li><span class="when">2020 – 2024</span><span class="what">Several Academic Scholarships <span class="place">— Lanzhou University</span></span></li>
     </ul>
   </section>
 
   <!-- ================= Education & Experience ================= -->
-  <section class="reveal" id="education-experience">
-    <div class="sec-head"><span class="sec-num">06</span><h2>Education &amp; Experience</h2><span class="rule" aria-hidden="true"></span></div>
-    <ul class="timeline">
-      <li class="current">
-        <span class="icon-tile" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+  <section id="education-experience">
+    <h2>Education &amp; Experience</h2>
+    <ul class="rows edu">
+      <li>
+        <span class="when">Sept. 2024 – Present</span>
+        <span class="what">
+          <span class="title">Ph.D. in Computer Science</span>
+          <span class="meta">University of Science and Technology of China (USTC), Hefei, China</span>
+          <span class="meta">Advisor: Prof. <a href="https://scholar.google.com/citations?user=83QxmA8AAAAJ" target="_blank" rel="noopener">Lan Zhang</a></span>
         </span>
-        <div class="tl-card">
-          <div class="tl-top"><span class="tl-title">Ph.D. in Computer Science</span><span class="tl-when">Sept. 2024 – Present</span></div>
-          <span class="tl-org">University of Science and Technology of China (USTC), Hefei, China</span>
-          <span class="tl-adv">Advisor: Prof. <a href="https://scholar.google.com/citations?user=83QxmA8AAAAJ" target="_blank" rel="noopener">Lan Zhang</a></span>
-        </div>
       </li>
       <li>
-        <span class="icon-tile" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <span class="when">May 2022 – Nov. 2022</span>
+        <span class="what">
+          <span class="title">Developer, Wallfacer Series Projects</span>
+          <span class="meta">Huawei Open Source Internship, Remote / China</span>
         </span>
-        <div class="tl-card">
-          <div class="tl-top"><span class="tl-title">Developer, Wallfacer Series Projects</span><span class="tl-when">May 2022 – Nov. 2022</span></div>
-          <span class="tl-org">Huawei Open Source Internship, Remote / China</span>
-        </div>
       </li>
       <li>
-        <span class="icon-tile" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+        <span class="when">Sept. 2020 – Jun. 2024</span>
+        <span class="what">
+          <span class="title">B.Sc. in Computer Science</span>
+          <span class="meta">Lanzhou University, Lanzhou, China</span>
+          <span class="meta">Advisor: Prof. Xin Liu</span>
         </span>
-        <div class="tl-card">
-          <div class="tl-top"><span class="tl-title">B.Sc. in Computer Science</span><span class="tl-when">Sept. 2020 – Jun. 2024</span></div>
-          <span class="tl-org">Lanzhou University, Lanzhou, China</span>
-          <span class="tl-adv">Advisor: Prof. Xin Liu</span>
-        </div>
       </li>
     </ul>
   </section>
@@ -887,23 +504,13 @@
     var root = document.documentElement;
 
     /* Theme toggle */
-    var toggle = document.querySelector(".theme-toggle");
-    function currentTheme() {
+    document.querySelector(".theme-toggle").addEventListener("click", function () {
       var t = root.getAttribute("data-theme");
-      if (t) return t;
-      return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    }
-    toggle.addEventListener("click", function () {
-      var next = currentTheme() === "dark" ? "light" : "dark";
+      if (!t) t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      var next = t === "dark" ? "light" : "dark";
       root.setAttribute("data-theme", next);
       try { localStorage.setItem("theme", next); } catch (e) {}
     });
-
-    /* Nav border once scrolled */
-    var nav = document.querySelector(".nav");
-    function onScroll() { nav.classList.toggle("scrolled", window.scrollY > 8); }
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
 
     /* BibTeX toggles and copy buttons */
     document.querySelectorAll(".bib-toggle").forEach(function (btn) {
@@ -926,21 +533,8 @@
       });
     });
 
-    var sections = Array.prototype.slice.call(document.querySelectorAll("main section[id]"));
-    if (!("IntersectionObserver" in window)) {
-      sections.forEach(function (s) { s.classList.add("in"); });
-      return;
-    }
-
-    /* Reveal sections as they enter the viewport */
-    var revealer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("in"); revealer.unobserve(e.target); }
-      });
-    }, { rootMargin: "0px 0px -8% 0px" });
-    sections.forEach(function (s) { revealer.observe(s); });
-
-    /* Highlight the nav link of the section in view */
+    /* Mark the nav link of the section in view */
+    if (!("IntersectionObserver" in window)) return;
     var links = {};
     document.querySelectorAll(".nav-links a").forEach(function (a) { links[a.getAttribute("href").slice(1)] = a; });
     var spy = new IntersectionObserver(function (entries) {
@@ -949,7 +543,7 @@
         Object.keys(links).forEach(function (k) { links[k].classList.toggle("active", k === e.target.id); });
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
-    sections.forEach(function (s) { spy.observe(s); });
+    document.querySelectorAll("main section[id]").forEach(function (s) { spy.observe(s); });
   })();
 </script>
 </body>
